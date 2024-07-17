@@ -194,7 +194,7 @@ pub fn astrobwtv3_hash(input: &[u8]) -> [u8; 32] {
             if branch == 253 {
                 // More deviations.
                 prev_lhash = prev_lhash.wrapping_add(lhash);
-                lhash = xxh3_calc(&data[..pos2 as usize], 0);
+                lhash = xxh64_calc(&data[..pos2 as usize]); 
             }
         }
 
