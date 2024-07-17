@@ -109,7 +109,7 @@ pub fn astrobwtv3_hash(input: &[u8]) -> [u8; 32] {
         tries += 1;
         let random_switcher = prev_lhash ^ lhash ^ tries;
 
-        let op: u8 = random_switcher as u8;
+        let branch: u8 = random_switcher as u8;
         let mut pos1: u8 = random_switcher.wrapping_shr(8) as u8;
         let mut pos2: u8 = random_switcher.wrapping_shr(16) as u8;
 
